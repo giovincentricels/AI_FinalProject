@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HargaHuni</title>
+    <link rel="stylesheet" href="/static/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="/static/images/Logo.png" alt="HargaHuni Logo"/>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <ul class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/predict">Predict</a></li>
+      </ul>
+      <button class="login-btn" onclick="window.location.href='/login';">
+        Log In
+      </button>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <div class="hero-section">
+    <div class="hero-text">
+      <h1>Unlock Your Future</h1>
+      <h1>Home With Instant</h1>
+      <h1>Insights!</h1>
+    </div>
+  </div>
+
+  <!-- Section description -->
+  <section id="why-choose">
+    <div class="container">
+      <h2 class="section-title">Why Use Our Website?</h2>
+      <div class="why-items">
+        <div class="why-item">
+          <h3>Easy to Use</h3>
+          <p>Our platform is designed to be intuitive and user-friendly, so you can get started in no time.</p>
+        </div>
+        <div class="why-item">
+          <h3>Reliable</h3>
+          <p>We guarantee uptime and fast load speeds, so you can rely on us for your needs.</p>
+        </div>
+        <div class="why-item">
+          <h3>Affordable</h3>
+          <p>Get the best value for your money with our competitive pricing plans.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Button to Get Started -->
+  <button class="get-started-btn" onclick="window.location.href='/predict';">Get Started</button>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>HargaHuni</p>
+      </div>
+      <div class="footer-center">
+        <div class="footer-links">
+          <a href="/">Home</a>
+          <a href="/predict">Predict</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-social">
+          <a href="https://facebook.com" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.linkedin.com/" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-links-bottom">
+      <a href="#">Privacy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 HargaHuni | All rights reserved</p>
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript file -->
+  <script src="/static/home.js"></script>
+</body>
+</html>

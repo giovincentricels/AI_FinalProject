@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --linear-grad: linear-gradient(to right, #141e30, #243b55);
+  --grad-clr1: #141e30;
+  --grad-clr2: #243b55;
+}
+
+/* Body Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 2cm;
+  background-color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;
+}
+
+/* Menu Links */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.menu li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--grad-clr1);
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: var(--grad-clr2);
+}
+
+/* Login Button */
+.login-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: 2px solid var(--grad-clr2);
+  border-radius: 20px;
+  background-color: transparent;
+  color: var(--grad-clr2);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: var(--grad-clr2);
+  color: #fff;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 10px;
+  }
+
+  .hamburger {
+    display: block;
+    order: -1;
+    margin-right: 15px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(221, 221, 221, 0.8);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    z-index: 1001;
+    gap: 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    border-bottom: 1px solid rgba(221, 221, 221, 0.6);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
+  }
+
+  .menu li a {
+    display: block;
+    padding: 20px 30px;
+    font-size: 18px;
+    color: var(--grad-clr1);
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .menu li a:hover {
+    background-color: rgba(240, 240, 240, 0.7);
+    color: var(--grad-clr2);
+  }
+
+  .login-btn {
+    margin-left: auto;
+    width: fit-content;
+    text-align: center;
+    order: 1;
+  }
+}
+
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 800px;
+  background-image: url("/static/images/Perbedaan-Rumah-Cluster-dan-Townhouse\ 1.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 8%;
+  color: white;
+  font-size: 8vw;
+  font-weight: bold;
+  max-width: 700px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  opacity: 0.75;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 3rem;
+  line-height: 1.4;
+}
+
+/* Section: Why Use Our Website */
+#why-choose {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: var(--grad-clr2);
+}
+
+.why-items {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.why-item {
+  flex: 1;
+  text-align: center;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.why-item:hover {
+  transform: translateY(-10px);
+}
+
+.why-item h3 {
+  font-size: 1.5rem;
+  color: var(--grad-clr1);
+  margin-bottom: 10px;
+}
+
+.why-item p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+/* Button: Get Started */
+.get-started-btn {
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  background-color: var(--grad-clr1);
+  color: white;
+  font-weight: bold;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: block;
+  margin: 30px auto 50px;
+  transition: all 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: var(--grad-clr2);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Footer Styles */
+.footer {
+  background: var(--linear-grad);
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: orange;
+}
+
+.footer-social {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.footer-social .social-icon {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: transform 0.3s, color 0.3s;
+}
+
+.footer-social .social-icon:hover {
+  color: orange;
+  transform: translateY(-5px);
+}
+
+.footer-links-bottom {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+
+.footer-links-bottom a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links-bottom a:hover {
+  color: orange;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: #ddd;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-links-bottom {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
